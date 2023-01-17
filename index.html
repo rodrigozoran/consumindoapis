@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Utils</title>
+</head>
+<body>
+    
+    <main>
+        <div class="card text-center" id="cardCep">
+            <div class="card-header">
+              Busca de Endereço
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Digite seu CEP e clique em "Buscar".</h5>
+              <input type="text" name="campocep" id="campocep" placeholder="Digite o CEP" maxlength="8" /><p></p>
+              <input class="btn btn-primary" type="submit"  id="searchCep" value="Buscar" onclick="searchCep()">
+
+              <div class="enderecoDiv">
+                <form id="formCEP">
+                  <div class="form-group">
+                    <label for="cep" id="cepDigitado1">CEP</label>
+                    <input type="text" id="cep" disabled name="cep" maxlength="8">
+                  </div>
+                  <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="logradouro" disabled name="endereco">
+                  </div>
+                  <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" disabled name="bairro">
+                  </div>
+                  <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="localidade" disabled name="cidade">
+                  </div>
+                  <div class="form-group">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" disabled name="uf">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              Consulta de CEP usando a API do viacep. Disponível em: https://viacep.com.br/
+            </div>
+        </div>
+
+        <div class="card text-center" id="cardWeather">
+          <div class="card-header">
+            Busca de Endereço
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Informções sobre o clima na sua cidade.</h5>
+            <input type="text" name="campocidade" id="campocidade" placeholder="Digite a cidade" required /><p></p>
+            <input class="btn btn-primary" type="submit"  id="weatherr" value="Buscar" onclick="weather()">
+
+            <div class="weatherDiv">
+              <form id="formWeather">
+                <div class="form-group">
+                  <label for="city" id="cityInput">Cidade</label>
+                  <input type="text" id="name" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="tempMinInput" id="tempMinInput">Temp. Mínima (ºC)</label>
+                  <input type="text" id="temp_min" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="tempMaxInput" id="tempMaxInput">Temp. Máxima (ºC)</label>
+                  <input type="text" id="temp_max" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="feelLikee" id="feelLikee">Temp. Atual (ºC)</label>
+                  <input type="text" id="feelsLike" disabled>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            Consulta de dados climáticos usando a API do openweathermap. Disponível em: https://openweathermap.org/
+          </div>
+      </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/apis.js"></script>
+</body>
+</html>
